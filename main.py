@@ -10,7 +10,7 @@ import shutil
 import subprocess
 import threading
 import tkinter as tk
-from tkinter import filedialog, messagebox, ttk
+from tkinter import filedialog, messagebox, ttk , PhotoImage
 
 # ---------- Utility helpers ----------
 def quote_path(p: str) -> str:
@@ -402,4 +402,8 @@ class PyInstallerBuilder:
 if __name__ == "__main__":
     root = tk.Tk()
     app = PyInstallerBuilder(root)
+    
+    icon = PhotoImage(file="assets/toolkit.png")
+    root.iconphoto(True, icon)  
+    
     root.mainloop()
